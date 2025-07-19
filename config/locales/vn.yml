@@ -1,0 +1,34 @@
+vi:
+  static_pages:
+    home:
+      title: "Trang chủ"
+      heading: "Chào mừng đến với Sample App"
+      subheading: "Đây là trang chủ của ứng dụng mẫu %{link}."
+      signup_button: "Đăng ký ngay!"
+    
+    help:
+      title: "Trợ giúp"
+      heading: "Trợ giúp"
+      description: "Nhận hỗ trợ về Ruby on Rails Tutorial tại %{link1}.
+                    Để nhận trợ giúp về ứng dụng mẫu này, xem %{link2}."
+
+    contact:
+      title: "Liên hệ"
+      heading: "Liên hệ"
+      description: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại %{link}."
+
+  users:
+    new:
+      title: "Đăng ký"
+      heading: "Đăng ký"
+
+  footer:
+    news: "Tin tức"
+
+  header:
+    login: "Đăng nhập"
+    english: "Tiếng Anh"
+    vietnamese: "Tiếng Việt"
+    
+  app:
+    title: "Ứng dụng mẫu Ruby on Rails Tutorial" 
