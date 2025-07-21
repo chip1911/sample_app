@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to Settings.app_logo_text, root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t("static_pages.home.title"), root_path %></li>
+        <li><%= link_to t("static_pages.help.title"), help_path %></li>
+        <li><%= link_to t("header.login"), "#" %></li>
+        <li><%= link_to t("header.english"), locale: :en %></li>
+        <li><%= link_to t("header.vietnamese"), locale: :vi %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

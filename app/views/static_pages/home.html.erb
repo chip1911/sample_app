@@ -1,0 +1,12 @@
+<%= provide :title, t(".title") %>
+<div class="center jumbotron">
+  <h1><%= t(".heading") %></h1>
+  <h2>
+    <%= t(".subheading", 
+    link: link_to(Settings.tutorial_text, 
+    Settings.tutorial_url)).html_safe %>
+  </h2>
+  <%= link_to t(".signup_button"), 
+  signup_path, 
+  class: "btn btn-lg btn-primary" %>
+</div>
