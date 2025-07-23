@@ -17,11 +17,6 @@ vi:
       heading: "Liên hệ"
       description: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại %{link}."
 
-  users:
-    new:
-      title: "Đăng ký"
-      heading: "Đăng ký"
-
   footer:
     news: "Tin tức"
 

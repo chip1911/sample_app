@@ -7,3 +7,6 @@ tutorial_text: "Ruby on Rails Tutorial"
 tutorial_help_text: "Rails Tutorial help page"
 tutorial_contact_text: "contact page"
 app_logo_text: "Sample App"
+maximum_name_length: 50
+maximum_email_length: 255
+minimum_password_length: 6

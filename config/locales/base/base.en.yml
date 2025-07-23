@@ -16,11 +16,6 @@ en:
       title: "Contact"
       heading: "Contact"
       description: "Contact the Ruby on Rails Tutorial about the sample app at %{link}."
-
-  users:
-    new:
-      title: "Sign up"
-      heading: "Sign up"
  
   footer:
     news: "News"
