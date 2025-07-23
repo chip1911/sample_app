@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d-]+(\.[a-z\d-]+)*\.[a-z]+\z/i
   MAXIMUM_AGE = 100
+  USER_PERMIT = %i(name email password password_confirmation birthday).freeze
 
   before_save :downcase_email
 

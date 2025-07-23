@@ -27,3 +27,13 @@ vi:
     
   app:
     title: "Ứng dụng mẫu Ruby on Rails Tutorial" 
+
+  errors:
+    template:
+      header:
+        one: "Biểu mẫu chứa 1 lỗi"
+        other: "Biểu mẫu chứa %{count} lỗi"
+  
+  time:
+    formats:
+      long: "%m/%d/%Y %H:%M"
