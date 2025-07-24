@@ -24,7 +24,13 @@ en:
     login: "Log in"
     english: "English"
     vietnamese: "Vietnamese"
-    
+    account: "Account"
+    signup: "Sign up"
+    log_out: "Log out"
+    profile: "Profile"
+    settings: "Settings"
+    users_text: "Users"
+
   app:
     title: "Ruby on Rails Tutorial Sample App"
 
