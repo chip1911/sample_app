@@ -3,3 +3,12 @@ vi:
       new:
         title: "Đăng ký"
         heading: "Đăng ký"
+        create_account: "Tạo tài khoản"
+
+      create:
+        success: "Chào mừng bạn đến với Ứng dụng Mẫu!"
+        
+      show:
+        not_found: "Không tìm thấy người dùng!"
+        created_at: "Được tạo lúc:"
+        updated_at: "Cập nhật lần cuối:"

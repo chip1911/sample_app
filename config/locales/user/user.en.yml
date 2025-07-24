@@ -3,3 +3,12 @@ en:
       new:
         title: "Sign up"
         heading: "Sign up"
+        create_account: "Create my account"
+
+      create:
+        success: "Welcome to the Sample App!"
+      
+      show:
+        not_found: "Not found user!"
+        created_at: "Created at:"
+        updated_at: "Last updated at:"

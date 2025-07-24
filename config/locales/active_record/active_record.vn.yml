@@ -9,7 +9,8 @@ vi:
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
-
+        birthday: "Ngày sinh"
+        
     errors:
       models:
         user:

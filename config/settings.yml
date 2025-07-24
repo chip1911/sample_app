@@ -10,3 +10,4 @@ app_logo_text: "Sample App"
 maximum_name_length: 50
 maximum_email_length: 255
 minimum_password_length: 6
+image_size: 80
