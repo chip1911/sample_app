@@ -1,0 +1,12 @@
+vi:
+  sessions:
+    new:
+      title: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      submit: "Đăng nhập"
+      signup: "Đăng ký ngay"
+      description: "Bạn chưa có tài khoản? %{link}"
+
+    create:
+      invalid_email_or_password: "Email hoặc mật khẩu không hợp lệ"

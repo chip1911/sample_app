@@ -24,6 +24,12 @@ vi:
     login: "Đăng nhập"
     english: "Tiếng Anh"
     vietnamese: "Tiếng Việt"
+    account: "Tài khoản"
+    signup: "Đăng ký"
+    log_out: "Đăng xuất"
+    profile: "Hồ sơ"
+    settings: "Cài đặt"
+    users_text: "Người dùng"
     
   app:
     title: "Ứng dụng mẫu Ruby on Rails Tutorial" 
