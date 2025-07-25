@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  attr_accessor :remember_token
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d-]+(\.[a-z\d-]+)*\.[a-z]+\z/i
   MAXIMUM_AGE = 100
@@ -28,6 +29,42 @@ class User < ApplicationRecord
       errors.add(:birthday, :future)
     elsif birthday < MAXIMUM_AGE.years.ago.to_date
       errors.add(:birthday, :too_old)
+    end
+  end
+
+  # Returns remember token digest.
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+    remember_digest
+  end
+
+  def session_token
+    remember_digest || remember
+  end
+
+  def forget
+    update_column :remember_digest, nil
+  end
+
+  def authenticated? remember_token
+    return false if remember_digest.blank?
+
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  class << self
+    def digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create string, cost:
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
     end
   end
 end
