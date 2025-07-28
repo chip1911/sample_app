@@ -11,3 +11,4 @@ vi:
       
     create:
       invalid_email_or_password: "Email hoặc mật khẩu không hợp lệ"
+      not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để nhận liên kết kích hoạt."

@@ -7,6 +7,7 @@ vi:
 
       create:
         success: "Chào mừng bạn đến với Ứng dụng Mẫu!"
+        check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
         
       show:
         not_found: "Không tìm thấy người dùng!"
