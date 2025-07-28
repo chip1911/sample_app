@@ -23,6 +23,7 @@ end
 private
 
 def handle_successful_login user
+  forwarding_url = session[:forwarding_url]
   reset_session
   if params.dig(:session, :remember_me) == Settings.remember_me_status
     remember(user)
@@ -30,5 +31,5 @@ def handle_successful_login user
     forget(user)
   end
   log_in user
-  redirect_to user
+  redirect_to forwarding_url || user
 end

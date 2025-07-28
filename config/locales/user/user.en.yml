@@ -12,3 +12,29 @@ en:
         not_found: "Not found user!"
         created_at: "Created at:"
         updated_at: "Last updated at:"
+
+      edit:
+        title: "Edit user"
+        heading: "Update your profile"
+        update_changes: "Update changes"
+        change_img: "Change"
+        not_found: "Not found user!"
+        not_logged_in: "Please log in"
+        not_correct_user: "You cannot edit this user."
+        
+      update:
+        success: "Profile updated!"
+      
+      index:
+        title: "All users"
+      
+      destroy:
+        success: "User deleted!"
+        fail: "Delete fail!"
+        not_admin: "You are not admin!"
+
+      actions:
+        delete: "Delete"
+
+      messages:
+        confirm_delete: "Are you sure?"

@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_secure_password
   attr_accessor :remember_token
 
+  scope :newest, -> {order(created_at: :desc)}
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d-]+(\.[a-z\d-]+)*\.[a-z]+\z/i
   MAXIMUM_AGE = 100
   USER_PERMIT = %i(name email password password_confirmation birthday).freeze
@@ -14,7 +16,9 @@ class User < ApplicationRecord
             length: {maximum: Settings.maximum_email_length},
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
-  validates :password, length: {minimum: Settings.minimum_password_length}
+  validates :password, presence: true,
+            length: {minimum: Settings.minimum_password_length},
+            allow_nil: true
   validate :valid_birthday
 
   def downcase_email
