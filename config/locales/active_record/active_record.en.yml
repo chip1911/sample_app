@@ -2,7 +2,8 @@ en:
   activerecord:
     models:
       user: "User"
-      
+      micropost: "Micropost"
+
     attributes:
       user:
         name: "Name"
@@ -10,7 +11,9 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
         birthday: "Birthday"
-        
+      
+      micropost:
+        content: "Content"
     errors:
       models:
         user:

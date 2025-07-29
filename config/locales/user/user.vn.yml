@@ -13,6 +13,7 @@ vi:
         not_found: "Không tìm thấy người dùng!"
         created_at: "Được tạo lúc:"
         updated_at: "Cập nhật lần cuối:"
+        microposts_count: "Số bài đăng: %{count}"
 
       edit:
         title: "Cập nhật hồ sơ"
@@ -20,7 +21,6 @@ vi:
         update_changes: "Cập nhật thay đổi"
         change_img: "Thay đổi ảnh"
         not_found: "Không tìm thấy người dùng!"
-        not_logged_in: "Vui lòng đăng nhập"
         not_correct_user: "Bạn không thể chỉnh sửa người dùng này."
 
       update:
@@ -33,9 +33,3 @@ vi:
         success: "Người dùng đã bị xóa!"
         fail: "Xóa không thành công!"
         not_admin: "Bạn không phải là quản trị viên!"
-
-      actions:
-        delete: "Xóa"
-
-      messages:
-        confirm_delete: "bạn có chắc chắn muốn xóa không?"

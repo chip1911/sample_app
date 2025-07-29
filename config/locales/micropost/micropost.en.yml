@@ -1,0 +1,16 @@
+en:
+  microposts:
+    micropost:
+      posted_ago: "Posted %{time} ago"
+    
+    create:
+      success: "Micropost created successfully."
+
+    destroy:
+      success: "Micropost deleted successfully."
+      fail: "Failed to delete micropost."
+      not_found: "Micropost invalid."
+
+    messages:
+      invalid_format: "Invalid image format."
+      too_large: "Image size is too large, must be less than 5MB."

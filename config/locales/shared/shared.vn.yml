@@ -1,0 +1,11 @@
+vi:
+  shared:
+    user_info:
+      view_profile: "Xem hồ sơ"
+      micropost_count:
+        one: "1 bài viết"
+        other: "%{count} bài viết"
+
+    micropost_form:
+      placeholder: "Viết bài mới..."
+      submit: "Đăng"
