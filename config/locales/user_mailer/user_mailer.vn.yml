@@ -1,0 +1,16 @@
+vi:
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      greet: "Xin chào %{name},"
+      welcome: "Chào mừng bạn đến với Ứng dụng Mẫu! Nhấn vào liên kết dưới đây để kích hoạt tài khoản của bạn:"
+      activate: "Kích hoạt"
+
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+      instruction: "Để đặt lại mật khẩu, hãy nhấn vào liên kết dưới đây:"
+      expiry_notice: "Liên kết này sẽ hết hạn trong 2 giờ."
+      ignore_notice: "Nếu bạn không yêu cầu đặt lại mật khẩu,
+                      vui lòng bỏ qua email này và mật khẩu của bạn sẽ giữ nguyên."
+      title: "Đặt lại mật khẩu"
+      link_text: "Đặt lại mật khẩu"

@@ -23,13 +23,18 @@ end
 private
 
 def handle_successful_login user
-  forwarding_url = session[:forwarding_url]
-  reset_session
-  if params.dig(:session, :remember_me) == Settings.remember_me_status
-    remember(user)
+  if user.activated?
+    forwarding_url = session[:forwarding_url]
+    reset_session
+    if params.dig(:session, :remember_me) == Settings.remember_me_status
+      remember(user)
+    else
+      forget(user)
+    end
+    log_in user
+    redirect_to forwarding_url || user
   else
-    forget(user)
+    flash[:warning] = t(".not_activated")
+    redirect_to root_path, status: :see_other
   end
-  log_in user
-  redirect_to forwarding_url || user
 end

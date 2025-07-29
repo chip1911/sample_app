@@ -2,6 +2,7 @@ vi:
   activerecord:
     models:
       user: "Người dùng"
+      micropost: "Bài đăng"
 
     attributes:
       user:
@@ -10,6 +11,9 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
         birthday: "Ngày sinh"
+
+      micropost:
+        content: "Nội dung"
         
     errors:
       models:

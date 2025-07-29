@@ -5,7 +5,8 @@ vi:
       heading: "Chào mừng đến với Sample App"
       subheading: "Đây là trang chủ của ứng dụng mẫu %{link}."
       signup_button: "Đăng ký ngay!"
-    
+      micropost_feed: "Dòng thời gian bài viết"
+
     help:
       title: "Trợ giúp"
       heading: "Trợ giúp"
@@ -33,13 +34,27 @@ vi:
     
   app:
     title: "Ứng dụng mẫu Ruby on Rails Tutorial" 
+  
+  actions:
+    delete: "Xóa"
+  
+  messages:
+    confirm_delete: "Bạn có chắc chắn muốn xóa không?"
 
   errors:
     template:
       header:
         one: "Biểu mẫu chứa 1 lỗi"
         other: "Biểu mẫu chứa %{count} lỗi"
+    
+    messages:
+      invalid_format: "Phải là định dạng hình ảnh hợp lệ (JPEG, PNG, GIF)"
+      too_large: "Dung lượng ảnh phải nhỏ hơn 5MB"
   
   time:
     formats:
       long: "%m/%d/%Y %H:%M"
+  
+  application:
+    logged_in_user:
+      not_logged_in: "Vui lòng đăng nhập để truy cập trang này."    
