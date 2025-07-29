@@ -10,7 +10,14 @@ class UsersController < ApplicationController
   end
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts
+                                   .recent_posts
+                                   .includes(:user)
+                                   .with_attached_image,
+                              items: Settings.page_10,
+                              limit: Settings.page_10
+  end
 
   # POST /signup
   def create
@@ -65,15 +72,6 @@ class UsersController < ApplicationController
 
     flash[:warning] = t(".not_found")
     redirect_to root_path
-  end
-
-  # Confirm a user is logged in.
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t(".not_logged_in")
-    redirect_to login_path, status: :see_other
   end
 
   def correct_user
