@@ -8,7 +8,8 @@ vi:
       signup: "Đăng ký ngay"
       description: "Bạn chưa có tài khoản? %{link}"
       remember_me_text: "Ghi nhớ tôi trên máy tính này"
-      
+      forgot_password: "(Quên mật khẩu)"
+
     create:
       invalid_email_or_password: "Email hoặc mật khẩu không hợp lệ"
       not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để nhận liên kết kích hoạt."
