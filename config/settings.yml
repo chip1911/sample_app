@@ -4,10 +4,16 @@ help_url: "https://www.railstutorial.org/help"
 book_url: "https://www.railstutorial.org/book"
 tutorial_url: "https://www.railstutorial.org/"
 gravatar_url: "https://gravatar.com/emails"
+host_text: "http://localhost:3000"
+address_smtp: "smtp.gmail.com"
+email_from_address: "haphuong191113@gmail.com"
 tutorial_text: "Ruby on Rails Tutorial"
 tutorial_help_text: "Rails Tutorial help page"
 tutorial_contact_text: "contact page"
 app_logo_text: "Sample App"
+mailer_layout: "mailer"
+static_pages_home: "static_pages/home"
+mailer_authentication: "plain"
 remember_me_status: "1"
 maximum_name_length: 50
 maximum_email_length: 255
@@ -15,3 +21,9 @@ minimum_password_length: 6
 image_size: 80
 image_size_index: 50
 page_10: 10
+port: 587
+password_reset_expired: 2
+digit_140: 140
+digit_5: 5
+digit_20: 20
+resize_limit: [500, 500]

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update destroy)
-  before_action :logged_in_user, only: %i(edit update index)
+  before_action :load_user, except: %i(new create index)
+  before_action :logged_in_user, only: %i(edit update index following followers)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
@@ -10,17 +10,23 @@ class UsersController < ApplicationController
   end
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts
+                                   .recent_posts
+                                   .includes(:user)
+                                   .with_attached_image,
+                              items: Settings.page_10,
+                              limit: Settings.page_10
+  end
 
   # POST /signup
   def create
     @user = User.new user_params
 
     if @user.save
-      reset_session
-      log_in @user
-      flash[:success] = t(".success")
-      redirect_to @user, status: :see_other
+      @user.send_activation_email
+      flash[:info] = t(".check_email")
+      redirect_to root_url
     else
       render :new, status: :unprocessable_entity
     end
@@ -54,6 +60,24 @@ class UsersController < ApplicationController
     redirect_to users_path, status: :see_other
   end
 
+  # GET /users/:id/following
+  def following
+    @title = t(".following_title")
+    @user = User.find(params[:id])
+    @pagy, @users = pagy(@user.following.includes(:microposts),
+                         items: Settings.digit_20)
+    render "show_follow", status: :unprocessable_entity
+  end
+
+  # GET /users/:id/followers
+  def followers
+    @title = t(".followers_title")
+    @user = User.find(params[:id])
+    @pagy, @users = pagy(@user.followers.includes(:microposts),
+                         items: Settings.digit_20)
+    render "show_follow", status: :unprocessable_entity
+  end
+
   private
 
   def user_params
@@ -66,15 +90,6 @@ class UsersController < ApplicationController
 
     flash[:warning] = t(".not_found")
     redirect_to root_path
-  end
-
-  # Confirm a user is logged in.
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t(".not_logged_in")
-    redirect_to login_path, status: :see_other
   end
 
   def correct_user

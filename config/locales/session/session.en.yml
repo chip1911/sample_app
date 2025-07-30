@@ -8,6 +8,8 @@ en:
       signup: "Sign up now"
       description: "New user? %{link}"
       remember_me_text: "Remember me on this computer"
+      forgot_password: "(Forgot password)"
 
     create:
       invalid_email_or_password: "Invalid email or password"
+      not_activated: "Account not activated. Check your email for the activation link."

@@ -7,11 +7,13 @@ en:
 
       create:
         success: "Welcome to the Sample App!"
-      
+        check_email: "Please check your email to activate your account."
+
       show:
         not_found: "Not found user!"
         created_at: "Created at:"
         updated_at: "Last updated at:"
+        microposts_count: "Microposts count: %{count}"
 
       edit:
         title: "Edit user"
@@ -19,7 +21,6 @@ en:
         update_changes: "Update changes"
         change_img: "Change"
         not_found: "Not found user!"
-        not_logged_in: "Please log in"
         not_correct_user: "You cannot edit this user."
         
       update:
@@ -32,9 +33,19 @@ en:
         success: "User deleted!"
         fail: "Delete fail!"
         not_admin: "You are not admin!"
+      
+      follow:
+        follow: "Follow"
+      
+      unfollow:
+        unfollow: "Unfollow"
 
-      actions:
-        delete: "Delete"
+      following:
+        following_title: "Following"
 
-      messages:
-        confirm_delete: "Are you sure?"
+      followers:
+        followers_title: "Followers"
+
+      show_follow:
+        microposts: "Microposts:"
+        view_profile: "View profile"

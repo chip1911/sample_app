@@ -1,0 +1,15 @@
+en:
+  shared:
+    user_info:
+      view_profile: "View my profile"
+      micropost_count:
+        one: "1 micropost"
+        other: "%{count} microposts"
+
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
+
+    stats:
+      following: "Following"
+      followers: "Followers"

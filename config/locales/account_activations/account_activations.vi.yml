@@ -1,0 +1,6 @@
+vi:
+  account_activations:
+    edit:
+      user_not_found: "Không tìm thấy người dùng"
+      invalid_activation_link: "Liên kết kích hoạt không hợp lệ"
+      success: "Tài khoản đã được kích hoạt!"
