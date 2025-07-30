@@ -9,3 +9,7 @@ en:
     micropost_form:
       placeholder: "Compose new micropost..."
       submit: "Post"
+
+    stats:
+      following: "Following"
+      followers: "Followers"

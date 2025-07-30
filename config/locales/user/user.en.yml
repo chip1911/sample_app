@@ -33,3 +33,19 @@ en:
         success: "User deleted!"
         fail: "Delete fail!"
         not_admin: "You are not admin!"
+      
+      follow:
+        follow: "Follow"
+      
+      unfollow:
+        unfollow: "Unfollow"
+
+      following:
+        following_title: "Following"
+
+      followers:
+        followers_title: "Followers"
+
+      show_follow:
+        microposts: "Microposts:"
+        view_profile: "View profile"

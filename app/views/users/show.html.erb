@@ -9,8 +9,12 @@
             <p><strong><%= t(".created_at") %></strong> <%= l(@user.created_at, format: :long) %></p>
             <p><strong><%= t(".updated_at") %></strong> <%= l(@user.updated_at, format: :long) %></p>
         </section>
+        <section class="stats">
+            <%= render 'shared/stats' %>
+        </section>
     </aside>
     <div class="col-md-8">
+        <%= render "follow_form" if logged_in? %>
         <% if @microposts.any? %>
             <h3><%= t(".microposts_count", count: @microposts.count) %></h3>
             <ol class="microposts">

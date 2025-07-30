@@ -33,3 +33,19 @@ vi:
         success: "Người dùng đã bị xóa!"
         fail: "Xóa không thành công!"
         not_admin: "Bạn không phải là quản trị viên!"
+      
+      follow:
+        follow: "Theo dõi"
+
+      unfollow:
+        unfollow: "Bỏ theo dõi"
+      
+      following:
+        following_title: "Đang theo dõi"
+
+      followers:
+        followers_title: "Người theo dõi"
+      
+      show_follow:
+        microposts: "Bài đăng:"
+        view_profile: "Xem hồ sơ"

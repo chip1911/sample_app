@@ -25,4 +25,5 @@ port: 587
 password_reset_expired: 2
 digit_140: 140
 digit_5: 5
+digit_20: 20
 resize_limit: [500, 500]

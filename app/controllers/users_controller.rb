@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update destroy)
-  before_action :logged_in_user, only: %i(edit update index)
+  before_action :load_user, except: %i(new create index)
+  before_action :logged_in_user, only: %i(edit update index following followers)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
@@ -58,6 +58,24 @@ class UsersController < ApplicationController
       flash[:danger] = t(".fail")
     end
     redirect_to users_path, status: :see_other
+  end
+
+  # GET /users/:id/following
+  def following
+    @title = t(".following_title")
+    @user = User.find(params[:id])
+    @pagy, @users = pagy(@user.following.includes(:microposts),
+                         items: Settings.digit_20)
+    render "show_follow", status: :unprocessable_entity
+  end
+
+  # GET /users/:id/followers
+  def followers
+    @title = t(".followers_title")
+    @user = User.find(params[:id])
+    @pagy, @users = pagy(@user.followers.includes(:microposts),
+                         items: Settings.digit_20)
+    render "show_follow", status: :unprocessable_entity
   end
 
   private

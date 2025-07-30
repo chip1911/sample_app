@@ -9,3 +9,7 @@ vi:
     micropost_form:
       placeholder: "Viết bài mới..."
       submit: "Đăng"
+
+    stats:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
