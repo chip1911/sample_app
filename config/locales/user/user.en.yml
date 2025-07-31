@@ -7,7 +7,8 @@ en:
 
       create:
         success: "Welcome to the Sample App!"
-      
+        check_email: "Please check your email to activate your account."
+
       show:
         not_found: "Not found user!"
         created_at: "Created at:"

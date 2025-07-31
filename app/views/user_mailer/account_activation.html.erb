@@ -1,0 +1,5 @@
+<h1><%= Settings.app_logo_text %></h1>
+<p><%= t(".greet", name: @user.name) %></p>
+<p><%= t(".welcome") %></p>
+<%= link_to t(".activate"), edit_account_activation_url(id: @user.activation_token,
+    email: @user.email) %>
