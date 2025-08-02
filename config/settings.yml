@@ -21,3 +21,4 @@ image_size: 80
 image_size_index: 50
 page_10: 10
 port: 587
+password_reset_expired: 2

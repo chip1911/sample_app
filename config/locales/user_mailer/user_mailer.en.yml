@@ -5,3 +5,12 @@ en:
       greet: "Hi %{name},"
       welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
+    
+    password_reset:
+      subject: "Password reset"
+      instruction: "To reset your password, click the link below:"
+      expiry_notice: "This link will expire in 2 hours."
+      ignore_notice: "If you did not request your password to be reset, 
+                      please ignore this email and your password will stay as it is."
+      title: "Password Reset"
+      link_text: "Reset Password"
