@@ -1,0 +1,16 @@
+vi:
+  microposts:
+    micropost:
+      posted_ago: "Đã đăng %{time} trước"
+
+    create:
+      success: "Bài đăng đã được tạo thành công."
+
+    destroy:
+      success: "Bài đăng đã được xóa thành công."
+      fail: "Xóa bài đăng không thành công."
+      not_found: "Bài đăng không hợp lệ."
+
+    messages:
+      invalid_format: "Định dạng hình ảnh không hợp lệ."
+      too_large: "Kích thước hình ảnh quá lớn, phải nhỏ hơn 5MB."
